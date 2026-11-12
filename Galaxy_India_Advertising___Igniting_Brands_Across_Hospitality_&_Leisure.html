@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galaxy India Advertising | Igniting Brands Across Hospitality &amp; Leisure</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 6 Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- Galaxy AI Sales & Growth Agent Stylesheet -->
+<link rel="stylesheet" href="galaxy-ai-agent.css">
+
+<style>
+:root {
+  --bg: #fbf8f3;
+  --surface: #ffffff;
+  --text: #1b1a22;
+  --muted: #5d5b68;
+  --accent: #c0392b;
+  --accent2: #5b2a86;
+  --gold: #d97706;
+  --line: #e7e1d6;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #060a14;
+    --surface: #0a0f1d;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #f59e0b;
+    --accent2: #38bdf8;
+    --gold: #fbbf24;
+    --line: #1e293b;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #060a14;
+  --surface: #0a0f1d;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #f59e0b;
+  --accent2: #38bdf8;
+  --gold: #fbbf24;
+  --line: #1e293b;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Outfit', "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+header { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 100; backdrop-filter: blur(12px); }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; flex-wrap: wrap; gap: 14px; }
+
+/* Brand Logo Styling */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #060a14;
+  font-size: 20px;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+.logo-text { display: flex; flex-direction: column; }
+.logo-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  line-height: 1.1;
+}
+.logo-title span { color: #f59e0b; }
+.logo-sub {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: #06b6d4;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Nav Actions */
+.nav-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+nav a.nav-link { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
+nav a.nav-link:hover { color: var(--accent); }
+
+.theme-btn {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 7px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+.theme-btn:hover { border-color: var(--accent); }
+
+.btn-nav-ai {
+  background: linear-gradient(135deg, #0a0f1d 0%, #1a2236 100%);
+  color: #fbbf24;
+  border: 1.5px solid rgba(245, 158, 11, 0.5);
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
+  transition: all 0.2s ease;
+}
+.btn-nav-ai:hover {
+  border-color: #f59e0b;
+  transform: translateY(-1px);
+  box-shadow: 0 0 22px rgba(245, 158, 11, 0.45);
+}
+
+/* Hero Section */
+.hero { padding: 68px 0 52px; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  margin-bottom: 16px;
+}
+.hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.12; margin: 0 0 18px; max-width: 16em; }
+.hero h1 em { color: var(--accent); font-style: normal; }
+.hero p { color: var(--muted); max-width: 42em; font-size: 1.15rem; margin: 0 0 24px; }
+
+.hero-ctas { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 0;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(192, 57, 43, 0.3);
+  transition: all 0.2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(192, 57, 43, 0.45); }
+
+.btn-ai {
+  background: linear-gradient(135deg, #0a0f1d 0%, #1e293b 100%);
+  color: #fbbf24;
+  border: 1.5px solid rgba(245, 158, 11, 0.6);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.25);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-ai:hover {
+  transform: translateY(-2px);
+  border-color: #fbbf24;
+  box-shadow: 0 6px 25px rgba(245, 158, 11, 0.45);
+  color: #fde68a;
+}
+
+/* Sections */
+section { padding: 56px 0; border-top: 1px solid var(--line); }
+h2 { font-size: 2rem; margin: 0 0 16px; }
+.lead { color: var(--muted); max-width: 44em; font-size: 1.08rem; margin: 0 0 28px; }
+
+/* Grid & Cards */
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+.card .ic { font-size: 2rem; margin-bottom: 12px; }
+.card h3 { margin: 0 0 8px; color: var(--accent2); font-size: 1.2rem; }
+.card p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+
+.btn-sim {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-sim:hover {
+  background: #f59e0b;
+  color: #060a14;
+  border-color: #f59e0b;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+.mission {
+  background: var(--surface);
+  border-left: 5px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 28px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+ul.tick { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+ul.tick li { padding-left: 32px; position: relative; font-size: 16px; }
+ul.tick li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+/* Upgraded Lead Form */
+form#f { display: grid; gap: 16px; max-width: 680px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 13.5px; font-weight: 600; color: var(--muted); }
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.form-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+.btn-wa-submit {
+  background: #25d366;
+  color: #fff;
+  border: 0;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  text-decoration: none;
+}
+.btn-wa-submit:hover {
+  background: #20bd5a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* In-Page Success Screen */
+.success-card {
+  display: none;
+  background: var(--surface);
+  border: 2px solid #25d366;
+  border-radius: 18px;
+  padding: 34px 28px;
+  text-align: center;
+  max-width: 680px;
+  box-shadow: 0 16px 36px -10px rgba(37, 211, 102, 0.25);
+  animation: fadeInScale 0.35s ease;
+}
+@keyframes fadeInScale { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: scale(1); } }
+.success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.15);
+  color: #25d366;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 16px;
+}
+.success-card h3 { margin: 0 0 10px; font-size: 1.6rem; color: var(--text); }
+.success-card p { color: var(--muted); font-size: 15px; margin: 0 0 24px; line-height: 1.6; }
+.success-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* Floating WhatsApp & Facebook Action Buttons */
+.floating-actions {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99990;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.fb-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #1877f2;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(24, 119, 242, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+.fb-pill:hover {
+  background: #166fe5;
+  transform: translateX(-2px);
+  box-shadow: 0 8px 22px rgba(24, 119, 242, 0.45);
+}
+.wa-float-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.7);
+  border: 2.5px solid #fff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: waPulse 2.5s infinite;
+}
+.wa-float-btn:hover {
+  transform: scale(1.1);
+  background: #20bd5a;
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.55);
+}
+@keyframes waPulse {
+  0% { box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 640px) {
+  .floating-actions { bottom: 18px; right: 16px; gap: 8px; }
+  .fb-pill { display: none; }
+  .wa-float-btn { width: 50px; height: 50px; font-size: 24px; }
+}
+
+footer { padding: 32px 0; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+</style>
+</head>
+
+<body>
+<header><div class="wrap"><nav>
+  <a href="#hero" class="logo-box">
+    <div class="logo-icon"><i class="fa-solid fa-meteor"></i></div>
+    <div class="logo-text">
+      <div class="logo-title">GALAXY <span>INDIA</span></div>
+      <div class="logo-sub">ADVERTISING AGENCY</div>
+    </div>
+  </a>
+
+  <div class="nav-actions">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#services" class="nav-link">What we do</a>
+    <a href="#clients" class="nav-link">Who we serve</a>
+    <a href="#why" class="nav-link">Why us</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Toggle dark or light theme">
+      <i class="fa-solid fa-moon" id="themeIcon"></i>
+      <span id="themeLabel">Dark</span>
+    </button>
+    <button type="button" class="btn-nav-ai" onclick="window.GalaxyAI && window.GalaxyAI.open()">
+      <i class="fa-solid fa-bolt"></i>
+      <span>Ask Galaxy AI</span>
+    </button>
+  </div>
+</nav></div></header>
+
+<main>
+<div class="wrap hero" id="hero">
+  <div class="hero-badge">
+    <i class="fa-solid fa-sparkles"></i> PREMIER 360° HOSPITALITY FOOTFALL AGENCY
+  </div>
+  <h1>Igniting Brands Across <em>Hospitality &amp; Leisure</em></h1>
+  <p>Advertising, marketing and promotional services for hotels, resorts and water parks that captivate audiences, bypass OTA commissions, and drive explosive year-round footfalls.</p>
+  <div class="hero-ctas">
+    <a class="btn" href="#contact"><i class="fa-solid fa-paper-plane"></i> Get in touch</a>
+    <button type="button" class="btn-ai" onclick="window.GalaxyAI && window.GalaxyAI.open()">
+      <i class="fa-solid fa-robot"></i>
+      <span>Ask AURA (AI Strategist)</span>
+    </button>
+  </div>
+</div>
+
+<section id="about"><div class="wrap">
+  <h2>📍 About Us</h2>
+  <p class="lead">GALAXY INDIA ADVERTISING is a dynamic promotional marketing agency specializing in Advertising, Privilege Card Programs, and Footfall Campaigns tailored for the hospitality industry. From luxurious heritage hotels to vibrant water parks and serene resorts, we craft compelling brand experiences that captivate audiences and drive measurable business growth.</p>
+</div></section>
+
+<section id="mission"><div class="wrap">
+  <h2>🎯 Our Mission</h2>
+  <div class="mission">
+    To empower hospitality and leisure brands with innovative, results-driven marketing strategies that elevate visibility, engagement, direct booking revenues, and long-term customer loyalty.
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <h2>💼 What We Do</h2>
+  <p class="lead">End-to-end solutions designed to meet the unique footfall, revenue, and branding needs of hotels, resorts, and entertainment destinations.</p>
+  
+  <div class="grid">
+    <div class="card">
+      <div>
+        <div class="ic">📣</div>
+        <h3>Advertising Campaigns</h3>
+        <p>Print, digital, and outdoor media tailored to your luxury brand identity, high off-peak room occupancy, and banquet monetization.</p>
+      </div>
+      <button type="button" class="btn-sim" onclick="window.GalaxyAI && window.GalaxyAI.runSim('hotel', 50000)">
+        <i class="fa-solid fa-calculator"></i> Simulate ROI (₹50k)
+      </button>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="ic">📈</div>
+        <h3>Marketing Strategy</h3>
+        <p>Data-driven plans to bypass OTAs, boost direct bookings, drive high-ticket destination weddings, and increase corporate retreats.</p>
+      </div>
+      <button type="button" class="btn-sim" onclick="window.GalaxyAI && window.GalaxyAI.runSim('resort', 60000)">
+        <i class="fa-solid fa-chart-line"></i> Simulate Footfall (₹60k)
+      </button>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="ic">🎉</div>
+        <h3>Promotional Events</h3>
+        <p>On-site activations, 45-day summer blitzes, college group outreach across a 75-km radius, and celebrity influencer collaborations.</p>
+      </div>
+      <button type="button" class="btn-sim" onclick="window.GalaxyAI && window.GalaxyAI.runSim('waterpark', 75000)">
+        <i class="fa-solid fa-water"></i> Simulate Waterpark Blitz
+      </button>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="ic">📱</div>
+        <h3>Social Media Management</h3>
+        <p>Engaging viral video content, hyperlocal geo-targeted ads, and Google Maps 3-Pack SEO across major social media platforms.</p>
+      </div>
+      <button type="button" class="btn-sim" onclick="window.GalaxyAI && window.GalaxyAI.runSim('salon', 30000)">
+        <i class="fa-solid fa-bullhorn"></i> Simulate Local Ads (₹30k)
+      </button>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="ic">🎨</div>
+        <h3>Design &amp; Branding</h3>
+        <p>Logos, brochures, luxury signage, visual storytelling, and 4K aerial masterplan drone photography for premium developments.</p>
+      </div>
+      <button type="button" class="btn-sim" onclick="window.GalaxyAI && window.GalaxyAI.runSim('spa', 35000)">
+        <i class="fa-solid fa-spa"></i> Simulate Spa Growth (₹35k)
+      </button>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="ic">💳</div>
+        <h3>Privilege Membership Cards</h3>
+        <p>High-value voucher booklets and smart physical VIP cards driving upfront liquidity, verified corporate footfalls, and zero risk.</p>
+      </div>
+      <button type="button" class="btn-sim" onclick="window.GalaxyAI && window.GalaxyAI.runSim('card', 80000)">
+        <i class="fa-solid fa-id-card"></i> Simulate Card Revenue
+      </button>
+    </div>
+  </div>
+</div></section>
+
+<section id="clients"><div class="wrap">
+  <h2>🏨 Who We Serve</h2>
+  <div class="grid">
+    <div class="card"><h3>Boutique &amp; Luxury Hotels</h3></div>
+    <div class="card"><h3>Family &amp; Adventure Resorts</h3></div>
+    <div class="card"><h3>Theme Parks &amp; Water Parks</h3></div>
+    <div class="card"><h3>Hospitality Chains &amp; Independent Properties</h3></div>
+  </div>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <h2>🌐 Why Choose Us</h2>
+  <ul class="tick">
+    <li>Deep industry expertise in hospitality marketing across Pan-India markets</li>
+    <li>Dedicated on-ground corporate sales force and high-converting creative team</li>
+    <li>Proven track record of boosting brand visibility, direct bookings, and turnstile footfalls</li>
+    <li>Turnkey Privilege Membership Card monetization with zero upfront capital risk</li>
+    <li>Personalized service with measurable, high-ROI client deliverables</li>
+  </ul>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Let’s Talk Growth</h2>
+  <p class="lead">Tell us about your property, target footfalls, and what you want to achieve. Direct WhatsApp dispatch &amp; instant AI analysis available.</p>
+
+  <!-- Upgraded Functional Lead Form -->
+  <form id="f">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="n">Your Full Name *</label>
+        <input id="n" placeholder="e.g. Vikram Singhania" required>
+      </div>
+      <div class="form-group">
+        <label for="h">Property / Brand Name *</label>
+        <input id="h" placeholder="e.g. Grand Heritage Palace / Splash Island" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="p">WhatsApp Phone Number *</label>
+        <input id="p" type="tel" placeholder="e.g. +91 98715 00000" required>
+      </div>
+      <div class="form-group">
+        <label for="e">Business Email Address</label>
+        <input id="e" type="email" placeholder="e.g. contact@yourhotel.com">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="v">Industry Vertical</label>
+        <select id="v">
+          <option value="Hotels &amp; Heritage Resorts">Hotels &amp; Heritage Resorts</option>
+          <option value="Water Parks &amp; Amusement Hubs">Water Parks &amp; Amusement Hubs</option>
+          <option value="Wellness Spas &amp; Massage Centers">Wellness Spas &amp; Massage Centers</option>
+          <option value="Beauty Salons &amp; Premium Parlours">Beauty Salons &amp; Premium Parlours</option>
+          <option value="Real Estate &amp; Farmhouse Projects">Real Estate &amp; Farmhouse Projects</option>
+          <option value="Privilege Membership Cards">Privilege Membership Cards</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="g">Primary Campaign Objective</label>
+        <select id="g">
+          <option value="360° Footfall Blitz &amp; Direct Bookings">360° Footfall Blitz &amp; Direct Bookings</option>
+          <option value="Turnkey Privilege Cards Program">Turnkey Privilege Cards Program</option>
+          <option value="Digital Performance Ads &amp; OTA Bypass">Digital Performance Ads &amp; OTA Bypass</option>
+          <option value="45-Day Summer Promotion Drive">45-Day Summer Promotion Drive</option>
+          <option value="High-Ticket Wedding &amp; Banquet Leads">High-Ticket Wedding &amp; Banquet Leads</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="b">Estimated Monthly Campaign Budget</label>
+      <select id="b">
+        <option value="₹25,000 - ₹50,000 / month">₹25,000 - ₹50,000 / month (Local Targeted Launch)</option>
+        <option value="₹50,000 - ₹1,00,000 / month" selected>₹50,000 - ₹1,00,000 / month (High-Growth Standard)</option>
+        <option value="₹1,00,000 - ₹3,00,000 / month">₹1,00,000 - ₹3,00,000 / month (Regional Dominance)</option>
+        <option value="₹3,00,000+ / month">₹3,00,000+ / month (Pan-India High-Impact Blitz)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="m">Project Brief &amp; Specific Goals</label>
+      <textarea id="m" rows="3" placeholder="Tell us about your property location, current occupancy or footfalls, and target timeline..."></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn-wa-submit" type="submit">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Send via WhatsApp (+91 98715 00000)</span>
+      </button>
+      <button class="btn-outline" type="button" id="btnEmailDispatch">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Send via Email</span>
+      </button>
+      <button class="btn-outline" type="button" onclick="window.GalaxyAI && window.GalaxyAI.open()">
+        <i class="fa-solid fa-robot"></i>
+        <span>Consult AI Strategist</span>
+      </button>
+    </div>
+  </form>
+
+  <!-- In-Page Success Confirmation Card -->
+  <div class="success-card" id="formSuccessCard">
+    <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+    <h3>Inquiry Form Prepared Successfully!</h3>
+    <p>Thank you, <strong id="successName">Partner</strong>! Your campaign brief for <strong id="successProperty">your property</strong> has been organized and saved.</p>
+    <div class="success-actions">
+      <a class="btn-wa-submit" id="waDirectBtn" href="#" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>1-Click Submit on WhatsApp</span>
+      </a>
+      <button class="btn-ai" type="button" id="aiAnalyzeBtn">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>Ask AURA (AI) to Analyze My Goals</span>
+      </button>
+      <button class="btn-outline" type="button" id="btnResetForm">
+        <i class="fa-solid fa-rotate-left"></i>
+        <span>Submit Another Inquiry</span>
+      </button>
+    </div>
+  </div>
+
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <span>© 2026 Galaxy India Advertising. Igniting Brands Across Hospitality &amp; Leisure. New Delhi, India.</span>
+    <span>Phone: <a href="tel:+919871500000" style="color:inherit;font-weight:600;text-decoration:none">+91 98715 00000</a> | <a href="https://www.facebook.com/share/1dJ2c196yD/" target="_blank" rel="noopener noreferrer" style="color:#1877F2;text-decoration:none">Facebook</a></span>
+  </div>
+</div></footer>
+
+<!-- Floating WhatsApp & Facebook Action Buttons (Bottom Right) -->
+<div class="floating-actions" id="floatingActions">
+  <a href="https://www.facebook.com/share/1dJ2c196yD/" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="fb-pill" 
+     title="Visit Galaxy India Advertising on Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+    <span>Facebook Page</span>
+  </a>
+
+  <a href="https://wa.me/919871500000?text=Hello%20Galaxy%20India%20Advertising%2C%20I%20would%20like%20to%20inquire%20about%20hospitality%20marketing%20and%20promotional%20campaigns%20for%20my%20property." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="wa-float-btn" 
+     aria-label="Direct WhatsApp Contact (+91 98715 00000)"
+     title="Chat with Galaxy India Advertising on WhatsApp (+91 98715 00000)">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- Galaxy AI Sales & Growth Agent Script -->
+<script src="galaxy-ai-agent.js"></script>
+
+<!-- Interactive Logic for Theme, Form Validation, WhatsApp Prefill & AI Bridge -->
+<script>
+(function() {
+  // 1. Theme Management (Light / Dark)
+  var themeBtn = document.getElementById("themeToggleBtn");
+  var themeIcon = document.getElementById("themeIcon");
+  var themeLabel = document.getElementById("themeLabel");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      if (themeIcon) themeIcon.className = "fa-solid fa-sun";
+      if (themeLabel) themeLabel.textContent = "Light";
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      if (themeIcon) themeIcon.className = "fa-solid fa-moon";
+      if (themeLabel) themeLabel.textContent = "Dark";
+    }
+    try { localStorage.setItem("galaxy_theme", theme); } catch(e){}
+  }
+
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem("galaxy_theme"); } catch(e){}
+  if (!savedTheme) {
+    savedTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  applyTheme(savedTheme);
+
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function() {
+      var current = document.documentElement.getAttribute("data-theme") || "light";
+      applyTheme(current === "dark" ? "light" : "dark");
+    });
+  }
+
+  // 2. Functional Lead Form Handler
+  var form = document.getElementById("f");
+  var successCard = document.getElementById("formSuccessCard");
+  var successName = document.getElementById("successName");
+  var successProperty = document.getElementById("successProperty");
+  var waDirectBtn = document.getElementById("waDirectBtn");
+  var aiAnalyzeBtn = document.getElementById("aiAnalyzeBtn");
+  var btnResetForm = document.getElementById("btnResetForm");
+  var btnEmailDispatch = document.getElementById("btnEmailDispatch");
+
+  var nameInput = document.getElementById("n");
+  var propInput = document.getElementById("h");
+  var phoneInput = document.getElementById("p");
+  var emailInput = document.getElementById("e");
+  var vertSelect = document.getElementById("v");
+  var goalSelect = document.getElementById("g");
+  var budSelect = document.getElementById("b");
+  var msgInput = document.getElementById("m");
+
+  function getLeadPayload() {
+    return {
+      name: (nameInput.value || "").trim(),
+      property: (propInput.value || "").trim(),
+      phone: (phoneInput.value || "").trim(),
+      email: (emailInput.value || "").trim(),
+      vertical: vertSelect.value,
+      goal: goalSelect.value,
+      budget: budSelect.value,
+      notes: (msgInput.value || "").trim(),
+      date: new Date().toISOString()
+    };
+  }
+
+  function buildWhatsAppUrl(lead) {
+    var text = "Hello Galaxy India Advertising!\n\n" +
+      "I am inquiring from your Hospitality & Leisure landing page:\n" +
+      "*Name:* " + lead.name + "\n" +
+      "*Property / Brand:* " + lead.property + "\n" +
+      "*Phone:* " + lead.phone + (lead.email ? ("\n*Email:* " + lead.email) : "") + "\n" +
+      "*Vertical:* " + lead.vertical + "\n" +
+      "*Campaign Goal:* " + lead.goal + "\n" +
+      "*Monthly Budget:* " + lead.budget + "\n" +
+      (lead.notes ? ("*Project Brief:* " + lead.notes + "\n") : "") +
+      "\nPlease share a customized proposal.";
+    return "https://wa.me/919871500000?text=" + encodeURIComponent(text);
+  }
+
+  function handleLeadSubmission(e) {
+    if (e && e.preventDefault) e.preventDefault();
+
+    var lead = getLeadPayload();
+    if (!lead.name || !lead.property || !lead.phone) {
+      alert("Please complete the required fields (Name, Property, and Phone Number).");
+      return;
+    }
+
+    // Persist in localStorage for AI Agent synchronization
+    try {
+      localStorage.setItem("galaxy_last_lead", JSON.stringify(lead));
+      localStorage.setItem("galaxy_ai_lead_data", JSON.stringify({
+        name: lead.name,
+        business: lead.property,
+        phone: lead.phone,
+        vertical: lead.vertical,
+        goal: lead.goal,
+        step: 5,
+        complete: true
+      }));
+    } catch(err){}
+
+    // Update Success Card UI
+    if (successName) successName.textContent = lead.name;
+    if (successProperty) successProperty.textContent = lead.property;
+
+    var waUrl = buildWhatsAppUrl(lead);
+    if (waDirectBtn) {
+      waDirectBtn.href = waUrl;
+    }
+
+    // Reveal success card & hide form
+    form.style.display = "none";
+    successCard.style.display = "block";
+
+    // Auto-trigger WhatsApp dispatch
+    window.open(waUrl, "_blank");
+  }
+
+  if (form) {
+    form.addEventListener("submit", handleLeadSubmission);
+  }
+
+  // 3. Fallback Email Dispatch
+  if (btnEmailDispatch) {
+    btnEmailDispatch.addEventListener("click", function() {
+      var lead = getLeadPayload();
+      if (!lead.name || !lead.property) {
+        alert("Please enter at least your Name and Property Name to draft an email.");
+        return;
+      }
+      var subject = "Hospitality Growth Proposal Request - " + lead.property;
+      var body = "Galaxy India Advertising Team,\n\n" +
+        "Name: " + lead.name + "\n" +
+        "Property: " + lead.property + "\n" +
+        "Phone: " + lead.phone + "\n" +
+        "Email: " + lead.email + "\n" +
+        "Vertical: " + lead.vertical + "\n" +
+        "Goal: " + lead.goal + "\n" +
+        "Budget: " + lead.budget + "\n\n" +
+        "Brief:\n" + lead.notes;
+      window.location.href = "mailto:info@galaxyindiaadvertising.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+  }
+
+  // 4. In-page Success Screen "Ask AURA (AI) to Analyze My Goals"
+  if (aiAnalyzeBtn) {
+    aiAnalyzeBtn.addEventListener("click", function() {
+      var lead = getLeadPayload();
+      if (window.GalaxyAI) {
+        window.GalaxyAI.open();
+        setTimeout(function() {
+          var promptMsg = "Analyze our growth strategy for " + (lead.property || "our resort") + " in the " + (lead.vertical || "hospitality") + " sector with a budget of " + (lead.budget || "₹50,000 - ₹1,00,000 / month") + " targeting " + (lead.goal || "direct bookings & footfalls") + ".";
+          if (typeof window.GalaxyAI.handleUserMessage === "function") {
+            window.GalaxyAI.handleUserMessage(promptMsg);
+          } else if (typeof window.GalaxyAI.appendMessage === "function") {
+            window.GalaxyAI.appendMessage(promptMsg, "user");
+          }
+        }, 500);
+      }
+    });
+  }
+
+  // 5. Reset Form
+  if (btnResetForm) {
+    btnResetForm.addEventListener("click", function() {
+      form.reset();
+      form.style.display = "grid";
+      successCard.style.display = "none";
+    });
+  }
+})();
+</script>
+</body>
+</html>
